@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS/Stylesheets -->
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-HomePage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-AboutMePage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-CredentialsPage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-ProjectsPage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-ContactMePage.css">
+    <link rel="stylesheet" href="/CSS/Web-Dev-Portfolio-ReadingProgressBar.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+
+    <title>Isaac Marquez's Web Development Portfolio</title>
+
+    <!-- Website Icon -->
+    <link rel="icon" href="Images/IsaacMarquezLogo.png">
+
+</head>
+<body class="Light-Mode-Colors">
+
+    <!-- Navigation Menu -->
+    <header class="Web-Dev-Portfolio-Header">
+        <a href="/index.html" class="Web-Dev-Portfolio-Logo"><img src="/Images/IsaacMarquezLogo-Transparent.png" alt="Isaac Marquez's Logo" width="80px"></a> <!-- Website Logo -->
+
+        <nav class="Web-Dev-Portfolio-Navigation-Menu">
+            <a href="/index.html" style="--i:10;" class="active">Home</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-AboutMePage.html" style="--i:11;">About Me</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-CredentialsPage.html" style="--i:12;">Credentials</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-ProjectsPage.html" style="--i:13;">Projects</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-ContactMePage.html" style="--i:14;">Contact</a>
+        </nav>
+
+        <!-- Light and Dark Mode Buttons -->
+        <div class="Web-Dev-Portfolio-Dark-Mode-Button">
+            <i class='bx bx-sun Dark-Mode-Button'></i>
+        </div>
+    </header>
+
+    <!-- Reading Progress Bar that shows the user how far they have read into my website. -->
+    <div id="ReadingProgressBar"></div>
+
+    <!-- Home-page Section of the Website -->
+    <section class="HomePage">
+        <div class="HomePage-Contents">
+            <h2>Hello, I am</h2>
+            <h1>Isaac Marquez</h1>
+            <p>Welcome to my Web Development Portfolio! On this website, I will mainly showcase my background, my credentials and certificates, and my accomplishments and recent projects.<br><br>I decided to create a portfolio to display and demonstrate the skills, knowledge, and experience I have with website development and different programming languages. And by having a portfolio that I can use in the future, I can show my future employers my progress and evolution as a Website developer, allowing them to see not only my current skills but also further potential for any future projects and opportunities that I may receive. This Web Development Portfolio will serve as a tool I can use to help me accomplish my goals and advance my future career in the ever-evolving world of web development.</p>
+             
+            <!-- Contact icons that can be clicked so that they can be redirected to contact me. -->
+            <div class="Contacts-Icons">
+                <a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" style="--i:5;" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" style="--i:6;" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK" style="--i:7;" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://www.linkedin.com/in/isaac-marquez-0139812a9" style="--i:8;" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="mailto:isaacbathspa@gmail.com" style="--i:9;" target="_blank"><i class='bx bxl-gmail' ></i></a>
+            </div>
+
+            <!-- A button that, when clicked, would direct the user to the About Me section. -->
+            <a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html" class="About-Me-Button">About Me</a>
+        </div>
+
+        <!-- I created multiple divs for the rotating texts that would show some of my titles. -->
+        <div class="Isaac-Titles-Container">
+            <div class="Isaac-Titles-Box">
+                <div class="Isaac-Titles" style="--i:1;">
+                    <i class='bx bx-code-alt'></i>
+                    <h1 class="Rotating-Isaac-Titles">Web Developer</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:2;">
+                    <i class='bx bx-laptop'></i>
+                    <h1 class="Rotating-Isaac-Titles">Web Designer</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:3;">
+                    <i class='bx bxl-javascript'></i>
+                    <h1 class="Rotating-Isaac-Titles">Creative Coder</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:4;">
+                    <i class='bx bx-game'></i>
+                    <h1 class="Rotating-Isaac-Titles">Game Developer</h1>
+                </div>
+
+                <div class="Isaac-Titles-Rotating-Circle"></div>
+            </div>
+
+            <div class="Isaac-Titles-Overlay"></div>
+        </div>
+
+        <!-- This is the image I used for the home-page. -->
+        <div class="Home-Page-IMG">
+            <img src="Images/Isaac Marquez.png" alt="Isaac Marquez's Image">
+        </div>
+    </section>
+
+
+    <!-- About Me-page Section of the Website -->
+    <section class="Web-Dev-Portfolio-AboutMe">
+        <div class="Web-Dev-Portfolio-AboutMe-Main-Content">
+            <img src="Images/Isaac Marquez About Me.png" alt="Isaac Marquez's Photo ">
+            <div class="Web-Dev-Portfolio-AboutMe-Content">
+                <h1>About <span>Me</span></h1>
+                <h5>Creative Computing</h5>
+                <p>Name: Isaac Gerard Senoy Marquez<br>Age: 19<br>Date of Birth: January 25, 2005<br>Civil Status: Single<br>Nationality: Filipino<br>Languages Spoken: English, Tagalog &#40;Filipino&#41;, & Hiligaynon<br>Address: Al Qulaya'ah, Sharjah, United Arab Emirates<br>Programming Languages: Python, HTML, CSS, JavaScript</p>
+
+                <!-- These are clickable texts that, when clicked, open a tab that would show my trivia information in the given category. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias">
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac active-link" onclick="opentab(event, 'Hobbies')">Hobbies</p>
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac" onclick="opentab(event, 'Education')">Education</p>
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac" onclick="opentab(event, 'Goals')">Goals</p>
+                </div>
+                
+                <!-- This is the Hobbies category that details trivial information about my hobbies. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Hobbies">
+                    <ul>
+                        <li><span>Music</span><br>Guitar<br>Ukelele<br>Piano<br>Singing</li>
+                        <li><span>Sports</span><br>Basketball<br>Volleyball<br>Football<br>Badminton</li>
+                        <li><span>Art</span><br>Photography<br>Painting<br>Drawing<br>Videography</li>
+                    </ul>
+                </div>
+                
+                <!-- This is the Education category that would show where I studied from the Elementary level to where I'm currently in and my educational achievements. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Education">
+                    <ul>
+                        <li><span>Elementary School</span><br>Binalbagan Elementary School <span>&#40;2011-2015&#41;</span><br>- Honor Student<br>Home-school Global/ The Master’s Academy <span>&#40;2015-2017&#41;</span><br>- Elementary Diploma - Honor Student</li>
+                        <li><span>Junior High School</span><br>Home-school Global/ The Master’s Academy <span>&#40;2017-2020&#41;</span><br> Honor Student<br>AMA University Online Education (AMA OEd) <span>&#40;2020-2021&#41;</span><br> Junior High School Diploma (Completion) - High Honor Student - Valedictorian</li>
+                        <li><span>Senior High School</span><br>Vian Rechel Academy <span>&#40;2021-2023&#41;</span><br> Highest Honor Student - Valedictorian - Best in Research</li>
+                        <li><span>University</span><br>Bath Spa University <span>&#40;2023-2026&#41;</span><br>Currently taking BSc (Hons) Creative Computing. </li>
+                    </ul>
+                </div>
+                
+                <!-- This is the Goals category, in which I stated some of my current goals. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Goals">
+                    <ul>
+                        <li>- Acquire BSc (Hons) Creative Computing Degree<br>- Acquire MSc (Hons) Creative Computing Degree<br>- Certificate of Academic Excellence<br>- "A" Grade in all Semesters<br>- Gain practical experience through Internships<br>- Secure a Web Developer Position in a reputable company.</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials-page Section of the Website -->
+    <div class="My-Credentials-Text"><h1>My <span>Credentials</span></h1></div>
+
+    <div class="Web-Dev-Portfolio-CredentialsPage-Container">
+
+        <!-- These are the images of my Sololearn Certificates that would be shown using a slider. -->
+        <div class="Web-Dev-Portfolio-CredentialsPage-SlidingImage">
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Web\ Development\ \(Sololearn\).jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/SoloLearn\ \(Python\ Introduction\).jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Sololearn\ \(Python\ Intermediate\).jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Python\ Developer.jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Introduction\ to\ HTML.jpg);"> </div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Introduction\ to\ CSS.jpg);"> </div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Introduction\ to\ JavaScript.jpg);"></div>
+        </div>
+
+        <!-- These are the back and next buttons that the user can click to go back to the previous image or go next to another image. -->
+        <div class="backAndnextButton">
+            <button class="goBackbutton"><i class="bx bx-left-arrow"></i></button>
+            <button class="goNextbutton"><i class='bx bx-right-arrow'></i></button>
+        </div>
+
+    </div>
+
+    <!-- My Recent Projects Section of the Website-->
+    <div class="My-Projects-Text"><h1>My Recent<span> Projects</span></h1></div>
+
+    <!-- This is the container that stores my recent projects. -->
+    <section class="My-Projects-Container">
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Recipe Page.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Recipe Page</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML & CSS</p></div> 
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-1-Introduction%20to%20HTML%20and%20CSS/Exercises/Recipe%20Page" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/HTML and CSS Resource Guide.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>HTML & CSS Resource Guide</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML & CSS</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-1-Introduction%20to%20HTML%20and%20CSS/Exercises/HTML%20and%20CSS%20Resource%20(Bonus%20-%20Optional)" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Multi-Page Website.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Multi-Page Website</p>
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML & CSS</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-2-Links%20and%20navigation/Exercises/Multi-page%20Website%20(Bonus)" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Study Planner.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Study Planner</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML & CSS</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-4-Page%20Layout/Exercises/Study%20planner%20(Bonus)" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Canva Redesign.png" />
+          <!-- Title of the Project -->
+          <div class="My-Projects-Container-Contents-Box">
+          <p>Canva | Website ReDesign</p>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://bathspahomepage.my.canva.site/" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+        
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Audio Sampler with Text to Speech.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Audio Sampler (Text to Speech)</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML, CSS, & JavaScript</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-5-Embedded%20Content/Exercises/Audio%20Sampler/Soundboard%20Advanced" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Petrol Calculator.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Petrol Calculator</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML, CSS, & JavaScript</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-6-Javascript/Exercises/Petrol%20Calculator" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+        
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/RGB Colour Guessing Game (Bonus).png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>RGB Colour Guessing Game</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML, CSS, & JavaScript</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-6-Javascript/Exercises/RGB%20Colour%20Guessing%20Game%20(Bonus)" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Figma Redesign.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Figma | Website ReDesign</p>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://www.figma.com/file/1BQntQfVKBEtqWc5BOMPtx/FINAL-FIGMA?type=design&node-id=0%3A1&mode=design&t=y8l9mYwwqSXhNj5Q-1" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+        
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Image Filters.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Image Filters</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML & CSS</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-3-Images/Exercises/Three%20images" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Embed Video.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Embedded Video</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: HTML, CSS, & JavaScript</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez/tree/80d62f25cb22b448720b7d961811bcdfb48b02d6/Chapter-5-Embedded%20Content/Exercises/Embed%20Video" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+        
+        <!-- This is the box that contains the image of my recent projects. -->
+        <div class="My-Projects-Container-Contents">
+          <!-- The screenshot or preview image of the project. -->
+          <img src="/Images/Interactive Art.png" />
+          <div class="My-Projects-Container-Contents-Box">
+          <!-- Title of the Project -->
+          <p>Interactive Art</p>
+          <!-- Programming Language used for the project. -->
+          <div class="My-Projects-Container-ProgrammingLanguageUsed"><p>Programming Language: P5.js</p></div>
+            <!-- The view button that enlarges the image when clicked. -->
+            <button class="My-Projects-Container-Contents-View-Button">View</button>
+            <!-- The explore button that redirects the user to view the project or go to its repository. -->
+            <div class="My-Projects-Container-Contents-Explore-Button"><a href="https://editor.p5js.org/IsaacGerardMarquez/full/SFPJt-ZO-" target="_blank"><button>Explore</button></a></div>
+          </div>
+        </div>
+
+        <!-- This is for the close button used to close the image pop-up. -->
+        <div class="My-Projects-Container-Contents-Close">
+          <div class="My-Projects-Container-Contents-Close-Content">
+            <button class="My-Projects-Container-Contents-Close-Button"><i class='bx bxs-x-square' ></i></button>
+            <img>
+          </div>
+        </div>
+      </section>    
+
+    <!-- Contact-page Section of the Website -->
+    <div class="Web-Dev-Portfolio-ContactPage">
+        <div class="Web-Dev-Portfolio-ContactPage-Container">
+            <div class="Web-Dev-Portfolio-ContactPage-Box">
+            <div class="Web-Dev-Portfolio-ContactPage-Box-HeaderDesign">
+                <div class="Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-ThreeButton">
+                <div class="Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button Close"></div>
+                <div class="Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button Maximize"></div>
+                <div class="Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button Minimize"></div>
+                </div>
+            </div>
+    
+            <div class="Web-Dev-Portfolio-ContactPage-MovingBox">
+                <div class="Web-Dev-Portfolio-ContactPage-MovingBox-Hover Left">
+                <!-- This is the box that contains my Contact Information. -->
+                <div class="ContactMEBox">
+                    <div class="ContactMEBox-Contents"><h1>CONTACT ME</h1> <br><span>Feel free to reach out to me!</span></div>
+                    <div class="Information">
+                        <div class="Isaac-NameandTitle">
+                            <p id="Name">Isaac Marquez</p>
+                            <p id="Title">Web Developer</p>
+                        </div>
+    
+                        <!-- Contact icons that can be clicked so that they can be redirected to contact me. -->
+                        <div class="Contacts-Icons-Vertical">
+                        <a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl"  target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr"  target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK"  target="_blank"><i class='bx bxl-youtube' ></i></a>
+                        <a href="https://www.linkedin.com/in/isaac-marquez-0139812a9"  target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="mailto:isaacbathspa@gmail.com"  target="_blank"><i class='bx bxl-gmail' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+    
+                <!-- These are the input forms that the user can fill to contact me. -->
+                <div class="Web-Dev-Portfolio-ContactPage-MovingBox-Hover">
+                    <div class="User-Input-Form">
+                    <input class="User-Input" placeholder="FULL NAME">
+                    </div>
+                    <div class="User-Input-Form">
+                    <input class="User-Input" placeholder="EMAIL">
+                    </div>
+                    <div class="User-Input-Form">
+                    <input class="User-Input" placeholder="CONTACT NUMBER">
+                    </div>
+                    <div class="User-Input-Form">
+                    <input class="User-Input" placeholder="SUBJECT">
+                    </div>
+                    <div class="User-Input-Form MessageText">
+                    <input class="User-Input" placeholder="MESSAGE">
+                    </div>
+                    <a href="mailto:isaacbathspa@gmail.com" target="_blank">
+                      <button class="Send-Message-Button">SEND MESSAGE</button>
+                  </a>                
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    
+        <!-- The following lines are for the footer at the bottom of the webpage.  -->
+        <div class="FooterAtBottom">
+            <div class="FooterAtBottom-Logo"><a href="index.html"><img src="/Images/IsaacMarquezLogo-Transparent.png" alt="Isaac Marquez's Logo" width="130px"></a></div>
+            <div class="FooterAtBottom-Icon-Container">
+                <!-- These are the icon buttons that, when hovered, will pop out the title of that contact logo or icon. -->
+               <div class="ContactIcon Facebook">
+                  <div class="ContactIconPop-Up">
+                     Facebook
+                  </div>
+                  <span><a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" target="_blank"><i class='bx bxl-facebook'></i></a></span>
+               </div>
+      
+               <div class="ContactIcon Instagram">
+                  <div class="ContactIconPop-Up">
+                     Instagram
+                  </div>
+                  <span><a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" target="_blank"><i class='bx bxl-instagram' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon YouTube">
+                  <div class="ContactIconPop-Up">
+                     YouTube
+                  </div>
+                  <span><a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK"  target="_blank"><i class='bx bxl-youtube' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon LinkedIn">
+                  <div class="ContactIconPop-Up">
+                     LinkedIn
+                  </div>
+                  <span><a href="https://www.linkedin.com/in/isaac-marquez-0139812a9"  target="_blank"><i class='bx bxl-linkedin' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon Gmail">
+                  <div class="ContactIconPop-Up">
+                     Gmail
+                  </div>
+                  <span><a href="mailto:isaacbathspa@gmail.com" target="_blank"><i class='bx bxl-gmail' ></a></i></span>
+               </div>
+            </div>
+      
+            <!-- These are the navigational links that will take the user to the selected page when they click them. -->
+            <div class="FooterAtBottom-NavigationMenu">
+               <ul><li><a href="index.html">Home</a></li>
+                   <li><a href="Website-Pages/Web-Dev-Portfolio-AboutMePage.html">About Me</a></li>
+                   <li><a href="Website-Pages/Web-Dev-Portfolio-CredentialsPage.html">Credentials</a></li>
+                   <li><a href="Website-Pages/Web-Dev-Portfolio-ProjectsPage.html">Projects</a></li>
+                   <li><a href="Website-Pages/Web-Dev-Portfolio-ContactMePage.html">Contact Me</a></li>
+               </ul>
+           </div>
+      
+      </div>
+
+    <!-- This is the button that, when clicked, brings the user back to the top of the webpage. -->
+    <a href="#" class="GoBackToTopButton">
+    <i class='bx bxs-up-arrow'></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>Copyright &copy; 2024 | Personal Portfolio | Made by: Isaac Gerard S. Marquez</footer>
+
+    <!-- JavaScript -->
+    <script src="JavaScript/Web-Development-Portfolio.js"></script>
+    <script src="JavaScript/Projects-Pop-Up-Image.js"></script>
+</body>
+</html>
