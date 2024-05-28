@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS/Stylesheets -->
+    <link rel="stylesheet" href="/CSS/Web-Dev-Portfolio-AboutMePage.css">
+    <link rel="stylesheet" href="/CSS/PageTransition.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+    <title>Isaac Marquez's Web Development Portfolio</title>
+    
+    <!-- Website Icon -->
+    <link rel="icon" href="/Images/IsaacMarquezLogo.png">
+
+</head>
+<body class="Light-Mode-Colors">
+<div class="PageTransition PageTransition-1 ActiveState"></div>
+
+    <!-- Navigation Menu -->
+    <header class="Web-Dev-Portfolio-Header">
+        <a href="/index.html" class="Web-Dev-Portfolio-Logo"><img src="/Images/IsaacMarquezLogo-Transparent.png" alt="Isaac Marquez's Logo" width="80px"></a> <!-- Website Logo -->
+
+        <nav class="Web-Dev-Portfolio-Navigation-Menu">
+            <a href="/index.html" style="--i:10;" class="active">Home</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html" style="--i:11;">About Me</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-CredentialsPage.html" style="--i:12;">Credentials</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-ProjectsPage.html" style="--i:13;">Projects</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-ContactMePage.html" style="--i:14;">Contact</a>
+        </nav>
+
+        <!-- Light and Dark Mode Buttons -->
+        <div class="Web-Dev-Portfolio-Dark-Mode-Button">
+            <i class='bx bx-sun Dark-Mode-Button'></i>
+        </div>
+    </header>
+
+    <!-- About Me-page Section of the Website -->
+    <section class="Web-Dev-Portfolio-AboutMe">
+        <div class="Web-Dev-Portfolio-AboutMe-Main-Content">
+            <img src="/Images/Isaac Marquez About Me.png" alt="Isaac Marquez's Photo ">
+            <div class="Web-Dev-Portfolio-AboutMe-Content">
+                <h1>About <span>Me</span></h1>
+                <h5>Creative Computing</h5>
+                <p>Name: Isaac Gerard Senoy Marquez<br>Age: 19<br>Date of Birth: January 25, 2005<br>Civil Status: Single<br>Nationality: Filipino<br>Languages Spoken: English, Tagalog &#40;Filipino&#41;, & Hiligaynon<br>Address: Al Qulaya'ah, Sharjah, United Arab Emirates<br>Programming Languages: Python, HTML, CSS, JavaScript</p>
+
+                <!-- These are clickable texts that, when clicked, open a tab that would show my trivia information in the given category. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias">
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac active-link" onclick="opentab(event, 'Hobbies')">Hobbies</p>
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac" onclick="opentab(event, 'Education')">Education</p>
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac" onclick="opentab(event, 'Goals')">Goals</p>
+                </div>
+                
+                <!-- This is the Hobbies category that details trivial information about my hobbies. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Hobbies">
+                    <ul>
+                        <li><span>Music</span><br>Guitar<br>Ukelele<br>Piano<br>Singing</li>
+                        <li><span>Sports</span><br>Basketball<br>Volleyball<br>Football<br>Badminton</li>
+                        <li><span>Art</span><br>Photography<br>Painting<br>Drawing<br>Videography</li>
+                    </ul>
+                </div>
+
+                <!-- This is the Education category that would show where I studied from the Elementary level to where I'm currently in and my educational achievements. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Education">
+                    <ul>
+                        <li><span>Elementary School</span><br>Binalbagan Elementary School <span>&#40;2011-2015&#41;</span><br>- Honor Student<br>Home-school Global/ The Master’s Academy <span>&#40;2015-2017&#41;</span><br>- Elementary Diploma - Honor Student</li>
+                        <li><span>Junior High School</span><br>Home-school Global/ The Master’s Academy <span>&#40;2017-2020&#41;</span><br> Honor Student<br>AMA University Online Education (AMA OEd) <span>&#40;2020-2021&#41;</span><br> Junior High School Diploma (Completion) - High Honor Student - Valedictorian</li>
+                        <li><span>Senior High School</span><br>Vian Rechel Academy <span>&#40;2021-2023&#41;</span><br> Highest Honor Student - Valedictorian - Best in Research</li>
+                        <li><span>University</span><br>Bath Spa University <span>&#40;2023-2026&#41;</span><br>Currently taking BSc (Hons) Creative Computing. </li>
+                    </ul>
+                </div>
+                
+                <!-- This is the Goals category, in which I stated some of my current goals. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Goals">
+                    <ul>
+                        <li>- Acquire BSc (Hons) Creative Computing Degree<br>- Acquire MSc (Hons) Creative Computing Degree<br>- Certificate of Academic Excellence<br>- "A" Grade in all Semesters<br>- Gain practical experience through Internships<br>- Secure a Web Developer Position in a reputable company.</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+    <!-- Introducing myself in the About Me Section. -->
+    <div class="AboutMeDescription">
+        <p><span>Helloooo</span>, I am Isaac Gerard Senoy Marquez, your friendly and reliable web developer based in the United Arab Emirates! I am currently pursuing a Bachelor of Science in Creative Computing at Bath Spa University Academic Centre, RAK. From the moment I was first introduced to coding and programming in high school, I definitely knew that I wanted to start my career in this field. With a passion for web development, I have spent countless hours honing and polishing my skills in HTML, CSS, and JavaScript. And with the passion I have for web development, I am thrilled to delve into this immersive and mesmerizing world to create a variety of websites that would cater to all of my clients needs and demands.
+            <br><br><span>How am I different from other web developers?</span><br> I believe that if the process is good, so will its outcome be. This means that even though the final output of the website is important, the process and time I spend creating it are equally essential. This is why I assure you that if you choose me as your web developer, I will always take my time to understand all of your demands and everything you want in your website to ensure that it is perfectly unique to your brand.
+            <br><br><span>So if you are looking for a passionate web developer</span>,<br> whether you are a start-up company that wants to jumpstart and establish the digital presence of your business or a well-established company that aims to revamp its online identity, you are in the right place. Reach out to me now, and let us create a website that perfectly encapsulates your brand identity!
+            </p>
+    </div>
+
+    <!-- My Current Skills Graph -->
+    <div class="Isaac-Current-Skils">
+        <h1>My Skills Percentage</h1>
+        <div class="Isaac-Current-Skils-Progress-Bar">
+            <span class="Isaac-Current-Skils-Language">Python</span>
+            <div class="Isaac-Current-Skils-Progress-Bar-Graph">
+                <span class="Isaac-Current-Skils-Progress-Bar Python">
+                    <span class="Skills-Percentage">70%</span>
+                </span>
+            </div>
+        </div>
+        <div class="Isaac-Current-Skils-Progress-Bar">
+            <span class="Isaac-Current-Skils-Language">HTML</span>
+            <div class="Isaac-Current-Skils-Progress-Bar-Graph">
+                <span class="Isaac-Current-Skils-Progress-Bar HTML">
+                    <span class="Skills-Percentage">90%</span>
+                </span>
+            </div>
+        </div>
+        <div class="Isaac-Current-Skils-Progress-Bar">
+            <span class="Isaac-Current-Skils-Language">CSS</span>
+            <div class="Isaac-Current-Skils-Progress-Bar-Graph">
+                <span class="Isaac-Current-Skils-Progress-Bar CSS">
+                    <span class="Skills-Percentage">80%</span>
+                </span>
+            </div>
+        </div>
+        <div class="Isaac-Current-Skils-Progress-Bar">
+            <span class="Isaac-Current-Skils-Language">JavaScript</span>
+            <div class="Isaac-Current-Skils-Progress-Bar-Graph">
+                <span class="Isaac-Current-Skils-Progress-Bar JavaScript">
+                    <span class="Skills-Percentage">40%</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+        <!-- The following lines are for the footer at the bottom of the webpage.  -->
+        <div class="FooterAtBottom">
+            <div class="FooterAtBottom-Logo"><a href="/index.html"><img src="/Images/IsaacMarquezLogo-Transparent.png" alt="Isaac Marquez's Logo" width="130px"></a></div>
+            <div class="FooterAtBottom-Icon-Container">
+                <!-- These are the icon buttons that, when hovered, will pop out the title of that contact logo or icon. -->
+               <div class="ContactIcon Facebook">
+                  <div class="ContactIconPop-Up">
+                     Facebook
+                  </div>
+                  <span><a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" target="_blank"><i class='bx bxl-facebook'></i></a></span>
+               </div>
+      
+               <div class="ContactIcon Instagram">
+                  <div class="ContactIconPop-Up">
+                     Instagram
+                  </div>
+                  <span><a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" target="_blank"><i class='bx bxl-instagram' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon YouTube">
+                  <div class="ContactIconPop-Up">
+                     YouTube
+                  </div>
+                  <span><a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK"  target="_blank"><i class='bx bxl-youtube' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon LinkedIn">
+                  <div class="ContactIconPop-Up">
+                     LinkedIn
+                  </div>
+                  <span><a href="https://www.linkedin.com/in/isaac-marquez-0139812a9"  target="_blank"><i class='bx bxl-linkedin' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon Gmail">
+                  <div class="ContactIconPop-Up">
+                     Gmail
+                  </div>
+                  <span><a href="mailto:isaacbathspa@gmail.com" target="_blank"><i class='bx bxl-gmail' ></a></i></span>
+               </div>
+            </div>
+      
+            <!-- These are the navigational links that will take the user to the selected page when they click them. -->
+            <div class="FooterAtBottom-NavigationMenu">
+               <ul><li><a href="/index.html">Home</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html">About Me</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-CredentialsPage.html">Credentials</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-ProjectsPage.html">Projects</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-ContactMePage.html">Contact Me</a></li>
+               </ul>
+           </div>
+      
+      </div>
+      
+    <!-- Footer -->
+    <footer>Copyright &copy; 2024 | Personal Portfolio | Made by: Isaac Gerard S. Marquez</footer>
+
+    <!-- JavaScript -->
+    <script src="/JavaScript/Web-Development-Portfolio.js"></script>
+    <script src="/JavaScript/PageTransition.js"></script>
+
+</body>
+</html>
