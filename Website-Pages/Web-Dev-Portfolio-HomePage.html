@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS/Stylesheets -->
+    <link rel="stylesheet" href="/CSS/Web-Dev-Portfolio-HomePage.css">
+    <link rel="stylesheet" href="/CSS/PageTransition.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+    <title>Isaac Marquez's Web Development Portfolio</title>
+    
+    <!-- Website Icon -->
+    <link rel="icon" href="/Images/IsaacMarquezLogo.png">
+
+</head>
+<body class="Light-Mode-Colors">
+<div class="PageTransition PageTransition-2 ActiveState"></div>
+
+    <!-- Navigation Menu -->
+    <header class="Web-Dev-Portfolio-Header">
+        <a href="/index.html" class="Web-Dev-Portfolio-Logo"><img src="/Images/IsaacMarquezLogo-Transparent.png" alt="Isaac Marquez's Logo" width="80px"></a> <!-- Website Logo -->
+
+        <nav class="Web-Dev-Portfolio-Navigation-Menu">
+            <a href="/index.html" style="--i:10;" class="active">Home</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html" style="--i:11;">About Me</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-CredentialsPage.html" style="--i:12;">Credentials</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-ProjectsPage.html" style="--i:13;">Projects</a>
+            <a href="/Website-Pages/Web-Dev-Portfolio-ContactMePage.html" style="--i:14;">Contact</a>
+        </nav>
+
+        <!-- Light and Dark Mode Buttons -->
+        <div class="Web-Dev-Portfolio-Dark-Mode-Button">
+            <i class='bx bx-sun Dark-Mode-Button'></i>
+        </div>
+    </header>
+
+    <!-- Home-page Section of the Website -->
+    <section class="HomePage">
+        <div class="HomePage-Contents">
+            <h2>Hello, I am</h2>
+            <h1>Isaac Marquez</h1>
+            <p>Welcome to my Web Development Portfolio! On this website, I will mainly showcase my background, my credentials and certificates, and my accomplishments and recent projects.<br><br>I decided to create a portfolio to display and demonstrate the skills, knowledge, and experience I have with website development and different programming languages. And by having a portfolio that I can use in the future, I can show my future employers my progress and evolution as a Website developer, allowing them to see not only my current skills but also further potential for any future projects and opportunities that I may receive. This Web Development Portfolio will serve as a tool I can use to help me accomplish my goals and advance my future career in the ever-evolving world of web development.</p>
+             
+            <!-- Contact icons that can be clicked so that they can be redirected to contact me. -->
+            <div class="Contacts-Icons">
+                <a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" style="--i:5;" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" style="--i:6;" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK" style="--i:7;" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://www.linkedin.com/in/isaac-marquez-0139812a9" style="--i:8;" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="mailto:isaacbathspa@gmail.com" style="--i:9;" target="_blank"><i class='bx bxl-gmail' ></i></a>
+            </div>
+
+            <!-- A button that, when clicked, would direct the user to the About Me section. -->
+            <a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html" class="About-Me-Button">About Me</a>
+        </div>
+
+        <!-- I created multiple divs for the rotating texts that would show some of my titles. -->
+        <div class="Isaac-Titles-Container">
+            <div class="Isaac-Titles-Box">
+                <div class="Isaac-Titles" style="--i:1;">
+                    <i class='bx bx-code-alt'></i>
+                    <h1 class="Rotating-Isaac-Titles">Web Developer</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:2;">
+                    <i class='bx bx-laptop'></i>
+                    <h1 class="Rotating-Isaac-Titles">Web Designer</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:3;">
+                    <i class='bx bxl-javascript'></i>
+                    <h1 class="Rotating-Isaac-Titles">Creative Coder</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:4;">
+                    <i class='bx bx-game'></i>
+                    <h1 class="Rotating-Isaac-Titles">Game Developer</h1>
+                </div>
+
+                <div class="Isaac-Titles-Rotating-Circle"></div>
+            </div>
+
+            <div class="Isaac-Titles-Overlay"></div>
+        </div>
+
+        <!-- This is the image I used for the home-page. -->
+        <div class="Home-Page-IMG">
+            <img src="/Images/Isaac Marquez.png" alt="Isaac Marquez's Image">
+        </div>
+    </section>
+
+    
+        <!-- The following lines are for the footer at the bottom of the webpage.  -->
+        <div class="FooterAtBottom">
+            <div class="FooterAtBottom-Logo"><a href="index.html"><img src="/Images/IsaacMarquezLogo-Transparent.png" alt="Isaac Marquez's Logo" width="130px"></a></div>
+            <div class="FooterAtBottom-Icon-Container">
+                <!-- These are the icon buttons that, when hovered, will pop out the title of that contact logo or icon. -->
+               <div class="ContactIcon Facebook">
+                  <div class="ContactIconPop-Up">
+                     Facebook
+                  </div>
+                  <span><a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" target="_blank"><i class='bx bxl-facebook'></i></a></span>
+               </div>
+      
+               <div class="ContactIcon Instagram">
+                  <div class="ContactIconPop-Up">
+                     Instagram
+                  </div>
+                  <span><a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" target="_blank"><i class='bx bxl-instagram' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon YouTube">
+                  <div class="ContactIconPop-Up">
+                     YouTube
+                  </div>
+                  <span><a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK"  target="_blank"><i class='bx bxl-youtube' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon LinkedIn">
+                  <div class="ContactIconPop-Up">
+                     LinkedIn
+                  </div>
+                  <span><a href="https://www.linkedin.com/in/isaac-marquez-0139812a9"  target="_blank"><i class='bx bxl-linkedin' ></i></a></span>
+               </div>
+      
+               <div class="ContactIcon Gmail">
+                  <div class="ContactIconPop-Up">
+                     Gmail
+                  </div>
+                  <span><a href="mailto:isaacbathspa@gmail.com" target="_blank"><i class='bx bxl-gmail' ></a></i></span>
+               </div>
+            </div>
+
+            <!-- These are the navigational links that will take the user to the selected page when they click them. -->
+            <div class="FooterAtBottom-NavigationMenu">
+               <ul><li><a href="/index.html">Home</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html">About Me</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-CredentialsPage.html">Credentials</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-ProjectsPage.html">Projects</a></li>
+                   <li><a href="/Website-Pages/Web-Dev-Portfolio-ContactMePage.html">Contact Me</a></li>
+               </ul>
+           </div>
+      
+      </div>
+
+    <!-- Footer -->
+    <footer>Copyright &copy; 2024 | Personal Portfolio | Made by: Isaac Gerard S. Marquez</footer>
+
+    <!-- JavaScript -->
+    <script src="/JavaScript/Web-Development-Portfolio.js"></script>
+    <script src="/JavaScript/PageTransition.js"></script>
+
+</body>
+</html>
