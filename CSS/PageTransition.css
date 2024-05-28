@@ -1,0 +1,59 @@
+/* This is the color that is used for the page transition effect. */
+:root {
+    --PageTransitionColor: #333;
+}
+  
+/* This is the first page transition effect that has a full screen coverage and fade out effect. */
+.PageTransition-1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--PageTransitionColor);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.7s ease-out;
+    z-index: 200;
+}
+  
+/* This is the active state for the first page transition effect that has a full screen coverage. */
+.PageTransition-1.ActiveState {
+    opacity: 1;
+    pointer-events: all;
+}
+  
+/* This is the second page transition effect that comes from the left side. */
+.PageTransition-2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background-color: var(--PageTransitionColor);
+    transition: 0.7s ease-out;
+    z-index: 200;
+}
+  
+/* This is the active state of the second page transition effect that comes from the left side. */
+.PageTransition-2.ActiveState {
+    left: 0px;
+}
+  
+/* This is the third page transition effect that comes from the top. */
+.PageTransition-3 {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--PageTransitionColor);
+    transition: 0.7s ease-out;
+    z-index: 200;
+}
+  
+/* This is the active state of the third page transition effect that comes from the top. */
+.PageTransition-3.ActiveState {
+    top: 0;
+}
+  
