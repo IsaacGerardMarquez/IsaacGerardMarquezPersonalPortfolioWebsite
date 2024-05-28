@@ -1,0 +1,624 @@
+/* I used this to apply a smooth scrolling behavior for the entire HTML and its elements. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* I reset the default styles. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Light Mode Colours*/
+.Light-Mode-Colors {
+    --Background-Color-Change: white;
+    --Maroon-Color: rgba(73, 48, 54, 255);
+    color: #333;
+}
+
+/* Dark Mode Colours*/
+.Dark-Mode-Colors {
+    --Background-Color-Change: #444444;
+    --White-Text-Color: white;
+    color: var(--White-Text-Color);
+}
+
+/* These are the stylings I used for the body element. */
+body {
+    background: var(--Background-Color-Change);
+    overflow-x: hidden;
+}
+
+/* This section styles the header of my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Header {
+    background: var(--Maroon-Color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 25px 7%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* This styles the logo of my website. */
+.Web-Dev-Portfolio-Logo {
+    margin-right: auto;
+    cursor: pointer;
+    animation: slideTransitionFromRight 1.8s ease forwards;
+}
+
+/* This styles the logo upon hover. */
+.Web-Dev-Portfolio-Logo:hover {
+    transform: scale(1.2);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* Navigation Menu: */
+/* This styles the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right: 33px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0; /* I set the width to 0 for the invisible line. */
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website when hovered. */
+.Web-Dev-Portfolio-Navigation-Menu a:hover::before {
+    width: 100%; /* When the user hovers, the line below the text expands to its full width. */
+}
+
+/* Light and Dark Mode Buttons: */
+/* This styles the dark mode button within my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Dark-Mode-Button {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 2.9s;
+}
+/* This styles the icon. */
+.Web-Dev-Portfolio-Dark-Mode-Button .Dark-Mode-Button {
+    color: white;
+    font-size: 28px;
+}
+
+/* This styles the sun and moon icons when hovered in light mode. */
+.Light-Mode-Colors .bx-moon:hover,
+.Light-Mode-Colors .bx-sun:hover {
+    color: rgb(255, 255, 0); /* The sun's color changes into yellow when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* This styles the sun and moon icons when hovered in dark mode. */
+.Dark-Mode-Colors .bx-sun:hover,
+.Dark-Mode-Colors .bx-moon:hover {
+    color: rgb(204, 204, 204); /* The moon's color changes into gray when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* Styling for the contents of the Home Page: */
+/* This styles the entire HomePage container. */
+.HomePage {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    padding: 60px 7% 0;
+}
+
+/* This styles the contents within the HomePage container. */
+.HomePage .HomePage-Contents {
+    max-width: 550px;
+}
+
+/* This styles the h2 elements within the HomePage-Contents container. */
+.HomePage-Contents h2 {
+    font-size: 34px;
+    opacity: 0;
+    animation: slideTransitionFromLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+/* This styles the h1 elements within the HomePage-Contents container. */
+.HomePage-Contents h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* This styles the p elements within the HomePage-Contents container. */
+.HomePage-Contents p {
+    font-size: 18px;
+    opacity: 0;
+    animation: slideTransitionFromLeft 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+/* Styling for the Contact Icons: */
+/* This styles all the contents within the Contacts-Icons container. */
+.Contacts-Icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: var(--Maroon-Color);
+    background-color: var(--White-Text-Color);
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--Maroon-Color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    text-decoration: none;
+    margin: 30px 15px 40px 0;
+    opacity: 0;
+    transition: .5s ease;
+    animation: slideTransitionFromTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles all the contents within the Contacts-Icons container when hovered. */
+.Contacts-Icons a:hover {
+    color: white;
+    background: var(--Maroon-Color);
+}
+
+/* This styles the About-Me-Button. */
+.About-Me-Button {
+    display: inline-block;
+    color: white;
+    background: var(--Maroon-Color);
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border: 2px solid var(--Maroon-Color);
+    padding: 12px 28px;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideTransitionFromTop 1s ease forwards;
+    animation-delay: 1.8s;
+}
+
+/* This styles the About-Me-Button when hovered. */
+.About-Me-Button:hover {
+    color: var(--Maroon-Color);
+    background-color: var(--White-Text-Color);
+    border-color: var(--Maroon-Color);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Styling for the rotating titles. */
+/* This styles the container of rotating titles. */
+.HomePage .Isaac-Titles-Container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    transform: translateY(-50%);
+    width: 769px;
+    height: 769px;
+    overflow: hidden;
+}
+
+/* This styles the box containing the rotating titles. */
+.Isaac-Titles-Container .Isaac-Titles-Box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards, RotatingEffectForIsaacTitles 15s ease-out infinite;
+    animation-delay: 2.3s, 3.2s;
+}
+
+/* This styles the individual rotating title. */
+.Isaac-Titles-Box .Isaac-Titles {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    color: var(--Maroon-Color);
+    background: var(--Background-Color-Change);
+    transform-origin: 350px;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    padding: 10px 0;
+}
+
+/* Styles used for specific elements within the rotating title. */
+.Isaac-Titles-Box .Isaac-Titles:nth-child(1) i {
+    margin-right: 25px;
+}
+
+.Isaac-Titles-Box .Isaac-Titles:nth-child(2) {
+    padding-bottom: 15px;
+}
+
+.Isaac-Titles-Box .Isaac-Titles:nth-child(4) {
+    padding-bottom: 5px;
+}
+
+/* This is the style used for the icons within the rotating title. */
+.Isaac-Titles i {
+    font-size: 45px;
+}
+
+/* This is the style used for the h1 elements within the rotating title. */
+.Isaac-Titles h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* This styles the rotating circle that is within the rotating title. */
+.Isaac-Titles-Box .Isaac-Titles-Rotating-Circle {
+    height: 68%;
+    width: 68%;
+    border-radius: 25%;
+    border: 7px solid var(--Maroon-Color);
+}
+
+/* These are the styles used for the icons and rotating titles when in  dark mode. */
+.Dark-Mode-Colors .bx-code-alt,
+.Dark-Mode-Colors .bx-laptop,
+.Dark-Mode-Colors .bxl-javascript,
+.Dark-Mode-Colors .bx-game,
+.Dark-Mode-Colors .Rotating-Isaac-Titles {
+    color: white;
+}
+
+/* This is a stle used for the border color of the rotating circle when in dark mode. */
+.Dark-Mode-Colors .Isaac-Titles-Box .Isaac-Titles-Rotating-Circle {
+    border-color: white;
+}
+
+/* This styles the overlay used in the rotating titles container. */
+.Isaac-Titles-Container .Isaac-Titles-Overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    border-top: 380px solid var(--Maroon-Color);
+    border-right: 334px solid var(--Maroon-Color);
+    border-bottom: 420px solid var(--Maroon-Color);
+    border-left: 484px solid transparent;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+/* This styles the image container on the home page section of my Web Development Personal Portfolio Website. */
+.Home-Page-IMG {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: auto;
+    padding-top: 240px;
+    z-index: 1; /* To make sure that the image is in the front.  */
+}
+
+/* This styles the image that is within the image container. */
+.Home-Page-IMG img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* The following lines are for styling the footer at the bottom of the webpage. */
+/* This styles the FooterAtBottom container. */
+.FooterAtBottom {
+    height: 370px;
+    width: 1525px;
+    background-color: var(--Maroon-Color);
+    padding-top:2px;
+}
+
+/* This styles the logo in the footer. */
+.FooterAtBottom-Logo {
+    margin-top: 30px;
+    text-align: center;
+    animation: slideTransitionFromRight 1s ease forwards;
+}
+
+.FooterAtBottom-Logo a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* This styles the logo in the footer when hovered. */
+.FooterAtBottom-Logo:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+/* This styles the FooterAtBottom-Icon-Container container. */
+.FooterAtBottom-Icon-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+/* The following lines styles each contact icon in the footer. */
+.FooterAtBottom-Icon-Container .ContactIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  margin: 0 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* This styles the contact icon container. */
+.FooterAtBottom-Icon-Container .ContactIcon span{
+  height: 60px;
+  width: 60px;
+  color: var(--Maroon-Color);
+  background: white;
+  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+  z-index: 1;
+}
+
+/* This styles all of the anchor tags within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* This styles all of the icon within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span i{
+  font-size: 25px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+/* The following lines styles the pop-up box when hovering over the contact icons. */
+.FooterAtBottom-Icon-Container .ContactIcon .ContactIconPop-Up{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  background: white;
+  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+  padding: 10px 19px;
+  pointer-events: none;
+  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+  z-index: 1;
+}
+
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+  top: -60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* This styles the arrow of the pop-up box. */
+.ContactIcon .ContactIconPop-Up:before{
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  background: white;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+}
+
+/* This styles the color of the icon when hovering over the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span{
+  color: white;
+}
+
+/* This adds a text shadow effect when hovered. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span,
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+/* This styles the background of the Facebook contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Facebook:hover span,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up:before{
+  background: #1877F2;
+}
+
+/* This styles the background of the Instagram contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Instagram:hover span,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up:before{
+  background: #C13584;
+}
+
+/* This styles the background of the YouTube contact icon when hovered. */
+.FooterAtBottom-Icon-Container .YouTube:hover span,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up:before{
+  background: #FF0000;
+}
+
+/* This styles the background of the LinkedIn contact icon when hovered. */
+.FooterAtBottom-Icon-Container .LinkedIn:hover span,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up:before{
+  background: #0077B5;
+}
+
+/* This styles the background of the Gmail contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Gmail:hover span,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up:before{
+  background: 	#B23121;
+}
+
+/* The following lines styles the navigation menu in the footer. */
+.FooterAtBottom-NavigationMenu{
+  margin: 30px;
+}
+
+/* This styles the unorder list for the navigation menu list in the footer. */
+.FooterAtBottom-NavigationMenu ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* This styles each of the navigational menu item link in the footer. */
+.FooterAtBottom-NavigationMenu ul li a{
+  font-size: 20px;
+  color:white;
+  margin: 15px;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: 0.9s;
+}
+
+/* This styles the navigation menu when hovered. */
+.FooterAtBottom-NavigationMenu ul li a:hover{
+  opacity: 1000;
+}
+
+/* Footer */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--Maroon-Color);
+    padding: 20px;
+}
+ 
+/* This styles the button that, when clicked, brings the user back to the top of the webpage.  */
+.GoBackToTopButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    font-size:40px;
+    color: white;
+    background:  #333;
+    height: 55px;
+    width: 55px;
+    right: 32px;
+    bottom: 16px;
+    margin-bottom: 70px;
+    border-radius: 10%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    text-decoration: none;
+    opacity:0;
+    transition: all .6s;
+}
+  
+/* This styles the active state of the GoBackToTopButton. */
+.GoBackToTopButton.active {
+    opacity:1;
+}
+ 
+/* This styles the GoBackToTopButton when hovered. */
+.GoBackToTopButton:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transform: scale(1.3);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* The following lines are the Keyframe animations: */
+/* Keyframe animation for sliding in from the right. */
+@keyframes slideTransitionFromRight {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(100px); /* It moves it 100px to the right. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the left. */
+@keyframes slideTransitionFromLeft {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(-100px); /* It moves it 100px to the left. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the top. */
+@keyframes slideTransitionFromTop {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateY(100px); /* It moves it down by 100px. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateY(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for the rotating titles. */
+@keyframes RotatingEffectForIsaacTitles {
+    0%, 20% {
+        transform: rotate(0deg); /* No rotation at the start. */
+    }
+    25%, 45% {
+        transform: rotate(-90deg); /* To rotate it by -90 degrees. */
+    }
+    50%, 70% {
+        transform: rotate(-180deg); /* To rotate it by -180 degrees. */
+    }
+    75%, 95% {
+        transform: rotate(-270deg); /* To rotate it by -270 degrees. */
+    }
+    100% {
+        transform: rotate(-360deg); /* Ends the rotation. */
+    }
+}
