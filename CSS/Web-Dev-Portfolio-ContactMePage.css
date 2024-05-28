@@ -1,0 +1,715 @@
+/* I reset the default styles. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* Light Mode Colours*/
+.Light-Mode-Colors {
+    --Background-Color-Change: white;
+    --Maroon-Color: rgba(73, 48, 54, 255);
+    color: #333;
+}
+
+/* Dark Mode Colours*/
+.Dark-Mode-Colors {
+    --Background-Color-Change: #444444;
+    --White-Text-Color: white;
+    color: var(--White-Text-Color);
+}
+
+body {
+    background: var(--Background-Color-Change);
+    overflow-x: hidden;
+}
+
+/* This section styles the header of my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Header {
+    background: var(--Maroon-Color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 25px 7%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* This styles the logo of my website. */
+.Web-Dev-Portfolio-Logo {
+    margin-right: auto;
+    cursor: pointer;
+    animation: slideTransitionFromRight 1.8s ease forwards;
+}
+
+/* This styles the logo upon hover. */
+.Web-Dev-Portfolio-Logo:hover {
+    transform: scale(1.2);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* Navigation Menu: */
+/* This styles the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right: 33px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0; /* I set the width to 0 for the invisible line. */
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website when hovered. */
+.Web-Dev-Portfolio-Navigation-Menu a:hover::before {
+    width: 100%; /* When the user hovers, the line below the text expands to its full width. */
+}
+
+/* Light and Dark Mode Buttons: */
+/* This styles the dark mode button within my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Dark-Mode-Button {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 2.9s;
+}
+/* This styles the icon. */
+.Web-Dev-Portfolio-Dark-Mode-Button .Dark-Mode-Button {
+    color: white;
+    font-size: 28px;
+}
+
+/* This styles the sun and moon icons when hovered in light mode. */
+.Light-Mode-Colors .bx-moon:hover,
+.Light-Mode-Colors .bx-sun:hover {
+    color: rgb(255, 255, 0); /* The sun's color changes into yellow when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* This styles the sun and moon icons when hovered in dark mode. */
+.Dark-Mode-Colors .bx-sun:hover,
+.Dark-Mode-Colors .bx-moon:hover {
+    color: rgb(204, 204, 204); /* The moon's color changes into gray when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+
+/* Styling for the contents of the Contact Me Page: */
+/* This styles the entire container of the Contact Page Section of my Website. */
+.Web-Dev-Portfolio-ContactPage {
+    margin-top: 50px;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* This styles the Web-Dev-Portfolio-ContactPage-Container. */
+.Web-Dev-Portfolio-ContactPage-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* This styles the box that contains my contact information. */
+.Web-Dev-Portfolio-ContactPage-Box {
+    position: relative;
+    height: 700px;
+    width: 1300px;
+    background: rgba(31,31,31,255);
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .2s;
+}
+  
+/* This styles the header design for the box that contains my contact information. */
+.Web-Dev-Portfolio-ContactPage-Box-HeaderDesign {
+    display: flex;
+    align-items: center;
+    background: rgba(24,24,24,255);
+    padding: 15px 60px;
+}
+  
+/* This styles the buttons inside the header design for the box that contains my contact information. */
+.Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button {
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+  
+/* The close button design for the header. */
+.Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button.Close {
+    background: rgba(255,95,88,255);
+}
+  
+/* The maximize button design for the header. */
+.Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button.Maximize {
+    background: rgba(255,189,46,255);
+}
+  
+/* The minimize button design for the header. */
+.Web-Dev-Portfolio-ContactPage-Box-HeaderDesign-Button.Minimize {
+    background: rgba(40,202,66,255);
+}
+  
+  
+/* This styles the moving box that is within the main box that contains my contact information. */
+.Web-Dev-Portfolio-ContactPage-MovingBox {
+    display: flex;
+}
+  
+/* This styles the moving box that is within the main box that contains my contact information when hovered. */
+.Web-Dev-Portfolio-ContactPage-MovingBox-Hover {
+    flex: 1;
+    padding: 50px;
+}
+  
+/* This moves the box to the left. */
+.Web-Dev-Portfolio-ContactPage-MovingBox-Hover.Left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This styles the main contact box. */
+.ContactMEBox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .4s;
+}
+  
+/* This styles all the content inside the main contact box. */
+.ContactMEBox-Contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--Maroon-Color);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: 1s ease;
+}
+  
+/* This styles the h1 element inside the ContactMEBox-Contents container. */
+.ContactMEBox-Contents h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* This styles the span element inside the ContactMEBox-Contents container. */
+.ContactMEBox-Contents span{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+/* This styles the contact box when hovered. */
+.ContactMEBox:hover .ContactMEBox-Contents {
+    transform: translateX(-21%) translateY(-15.2%);
+    transition-duration: 1s;
+}
+  
+/* This styles the Information container. */
+.Information {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+  
+/* This styles the Isaac-NameandTitle container, which has my name and title. */
+.Isaac-NameandTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 79%;
+    height: 100%;
+}
+  
+/* This styles my name. */
+#Name {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--Maroon-Color);
+}
+
+/* This styles my title. */
+#Title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 3px;
+}
+  
+/* This styles all the contents within the Contacts-Icons-Vertical container. */
+.Contacts-Icons-Vertical a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    color: var(--Maroon-Color);
+    background-color: var(--White-Text-Color);
+    height: 50px;
+    width: 50px;
+    padding: 20px;
+    margin-top: 15px;
+    border: 2px solid var(--Maroon-Color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    text-decoration: none;
+    transition: .5s ease;
+
+}
+  
+/* This styles all the contents within the Contacts-Icons-Vertical container when hovered. */
+.Contacts-Icons-Vertical a:hover {
+    color: white;
+    background: var(--Maroon-Color);
+}
+  
+/* This adds a bottom margin to each user-input form. */
+.User-Input-Form {
+    margin-bottom: 35px;
+}
+  
+/* This adds a top margin to the text "Message" in the user-input form. */
+.User-Input-Form.MessageText {
+    margin-top: 160px;
+}
+
+/* This is the overall styling used for the User-Input-Form. */
+.User-Input {
+    font-size: 14px;
+    color: white;
+    font-weight: 900;
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    transition: border-color 1.4s;
+}
+
+/* This colors the inputted value of the user to a grayish color that has the hex color value #888888. */
+.User-Input::placeholder {
+    color: #888888;
+}
+  
+/* This colors the bottom border or line to white when focused or selected. */
+.User-Input:focus {
+    border-bottom-color: white;
+}
+  
+/* This styles the Send Message Button. */
+.Send-Message-Button {
+    color: white;
+    background: var(--Maroon-Color);
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border: 2px solid var(--Maroon-Color);
+    padding: 12px 28px;
+    transition: .5s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromTop 1s ease forwards;
+    animation-delay: .6s;
+}
+
+/* This styles the Send Message Button when hovered. */
+.Send-Message-Button:hover {
+    color: var(--Maroon-Color);
+    background-color: var(--White-Text-Color);
+    border-color: var(--Maroon-Color);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+  
+/* The following lines are styling used for the Services Section within the Contage Page. */
+/* This styles the entire "Contact-Page-ServicesSection" container that is responsible for the entire Services section. */
+.Contact-Page-ServicesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+/* This styles the header for the Services Section. */
+.Contact-Page-ServicesSection-Header {
+    text-align: center;
+}
+
+/* This styles the h1 elements within the "Contact-Page-ServicesSection-Header" container. */
+.Contact-Page-ServicesSection-Header h1 {
+    color:var(--Maroon-Color);
+    font-size: 60px;
+    font-weight: 900;
+}
+
+/* This styles the p elements within the "Contact-Page-ServicesSection-Header" container. */
+.Contact-Page-ServicesSection-Header p {
+    color: var(--White-Text-Color);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* This styles the container that will store the Service boxes. */
+.Contact-Page-ServicesSection-Content-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* This styles the Service boxes. */
+.Contact-Page-ServicesSection-BOX {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 500px;
+    width: calc(33.333% - 60px);
+    margin: 50px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: solid 2px white;
+    position: relative;
+}
+
+/* This styles the h5 elements within the "Contact-Page-ServicesSection-BOX" container. */
+.Contact-Page-ServicesSection-BOX h5 {
+    font-size: 105px;
+    font-weight: 900;
+}
+
+/* This styles the h1 elements within the "Contact-Page-ServicesSection-BOX" container. */
+.Contact-Page-ServicesSection-BOX h1 {
+    color: var(--Maroon-Color);
+    font-size: 35px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+/* This styles the p elements within the "Contact-Page-ServicesSection-BOX" container. */
+.Contact-Page-ServicesSection-BOX p {
+    color: var(--White-Text-Color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* This would style the hover indicator on each of the Service box. */
+.Contact-Page-ServicesSection-BOX-HoverIndicator {
+    position: absolute;
+    background-color: var(--Maroon-Color);
+    height: 10px;
+    width: 200px;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 5px 5px;
+    display: none;
+    animation: Contact-Page-ServicesSection-BOX-HoverIndicator .9s;
+}
+
+/* This would style the "on hover effect" of the hover indicator on each of the Service box. */
+.Contact-Page-ServicesSection-BOX:hover {
+    box-shadow: 50px 50px 30px rgba(0, 0, 0, 0.08);
+    transition: all ease 0.5s;
+}
+
+/* This would display the hover indicator when the user hovers over the box. */
+.Contact-Page-ServicesSection-BOX:hover .Contact-Page-ServicesSection-BOX-HoverIndicator {
+    display: block;
+}
+
+/* The following lines are for styling the footer at the bottom of the webpage. */
+/* This styles the FooterAtBottom container. */
+.FooterAtBottom {
+    height: 370px;
+    width: 1525px;
+    background-color: var(--Maroon-Color);
+    padding-top:2px;
+}
+
+/* This styles the logo in the footer. */
+.FooterAtBottom-Logo {
+    margin-top: 30px;
+    text-align: center;
+    animation: slideTransitionFromRight 1s ease forwards;
+}
+
+.FooterAtBottom-Logo a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* This styles the logo in the footer when hovered. */
+.FooterAtBottom-Logo:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+/* This styles the FooterAtBottom-Icon-Container container. */
+.FooterAtBottom-Icon-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+/* The following lines styles each contact icon in the footer. */
+.FooterAtBottom-Icon-Container .ContactIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  margin: 0 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* This styles the contact icon container. */
+.FooterAtBottom-Icon-Container .ContactIcon span{
+  height: 60px;
+  width: 60px;
+  color: var(--Maroon-Color);
+  background: white;
+  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+  z-index: 2;
+}
+
+/* This styles all of the anchor tags within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* This styles all of the icon within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span i{
+  font-size: 25px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+/* The following lines styles the pop-up box when hovering over the contact icons. */
+.FooterAtBottom-Icon-Container .ContactIcon .ContactIconPop-Up{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  background: white;
+  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+  padding: 10px 19px;
+  pointer-events: none;
+  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+  z-index: 1;
+}
+
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+  top: -60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* This styles the arrow of the pop-up box. */
+.ContactIcon .ContactIconPop-Up:before{
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  background: white;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+}
+
+/* This styles the color of the icon when hovering over the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span{
+  color: white;
+}
+
+/* This adds a text shadow effect when hovered. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span,
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+/* This styles the background of the Facebook contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Facebook:hover span,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up:before{
+  background: #1877F2;
+}
+
+/* This styles the background of the Instagram contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Instagram:hover span,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up:before{
+  background: #C13584;
+}
+
+/* This styles the background of the YouTube contact icon when hovered. */
+.FooterAtBottom-Icon-Container .YouTube:hover span,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up:before{
+  background: #FF0000;
+}
+
+/* This styles the background of the LinkedIn contact icon when hovered. */
+.FooterAtBottom-Icon-Container .LinkedIn:hover span,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up:before{
+  background: #0077B5;
+}
+
+/* This styles the background of the Gmail contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Gmail:hover span,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up:before{
+  background: 	#B23121;
+}
+
+/* The following lines styles the navigation menu in the footer. */
+.FooterAtBottom-NavigationMenu{
+  margin: 30px;
+}
+
+/* This styles the unorder list for the navigation menu list in the footer. */
+.FooterAtBottom-NavigationMenu ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* This styles each of the navigational menu item link in the footer. */
+.FooterAtBottom-NavigationMenu ul li a{
+  font-size: 20px;
+  color:white;
+  margin: 15px;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: 0.9s;
+}
+
+/* This styles the navigation menu when hovered. */
+.FooterAtBottom-NavigationMenu ul li a:hover{
+  opacity: 1000;
+}
+  
+/* Footer */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--Maroon-Color);
+    padding: 20px;
+    z-index: 100;
+}
+
+/* The following lines are the Keyframe animations: */
+/* Keyframe animation for sliding in from the right. */
+@keyframes slideTransitionFromRight {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(100px); /* It moves it 100px to the right. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the top. */
+@keyframes slideTransitionFromTop {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateY(100px); /* It moves it down by 100px. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateY(0); /* It moves back to its original position. */
+    }
+}
+
+/* This is the animation keyframe for the hover indicator. */
+@keyframes Contact-Page-ServicesSection-BOX-HoverIndicator {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 200px;
+    }
+}
+
+/* Media queries for Responsiveness */
+@media (max-width: 1050px) {
+    .Contact-Page-ServicesSection-Content-Container {
+        flex-wrap: wrap;
+    }
+    .Contact-Page-ServicesSection {
+        width: 1500px;
+        height: auto;
+    }
+    .Contact-Page-ServicesSection-Header {
+        margin: 15px;
+    }
+    .Contact-Page-ServicesSection-BOX {
+        flex-grow: 1;
+        width: calc(50% - 60px);
+    }
+}
+@media (max-width: 700px) {
+    .Contact-Page-ServicesSection-BOX {
+        width: calc(100% - 60px);
+    }
+}
