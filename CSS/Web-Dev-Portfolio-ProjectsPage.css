@@ -1,0 +1,671 @@
+/* I reset the default styles. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Light Mode Colours*/
+.Light-Mode-Colors {
+    --Background-Color-Change: white;
+    --Maroon-Color: rgba(73, 48, 54, 255);
+    color: #333;
+}
+
+/* Dark Mode Colours*/
+.Dark-Mode-Colors {
+    --Background-Color-Change: #444444;
+    --White-Text-Color: white;
+    color: var(--White-Text-Color);
+}
+
+/* These are the stylings I used for the body element. */
+body {
+    background: var(--Background-Color-Change);
+    overflow-x: hidden;
+}
+
+/* This section styles the header of my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Header {
+    background: var(--Maroon-Color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 25px 7%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* This styles the logo of my website. */
+.Web-Dev-Portfolio-Logo {
+    margin-right: auto;
+    cursor: pointer;
+    animation: slideTransitionFromRight 1.8s ease forwards;
+}
+
+/* This styles the logo upon hover. */
+.Web-Dev-Portfolio-Logo:hover {
+    transform: scale(1.2);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* Navigation Menu: */
+/* This styles the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right: 33px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0; /* I set the width to 0 for the invisible line. */
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website when hovered. */
+.Web-Dev-Portfolio-Navigation-Menu a:hover::before {
+    width: 100%; /* When the user hovers, the line below the text expands to its full width. */
+}
+
+/* Light and Dark Mode Buttons: */
+/* This styles the dark mode button within my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Dark-Mode-Button {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 2.9s;
+}
+/* This styles the icon. */
+.Web-Dev-Portfolio-Dark-Mode-Button .Dark-Mode-Button {
+    color: white;
+    font-size: 28px;
+}
+
+/* This styles the sun and moon icons when hovered in light mode. */
+.Light-Mode-Colors .bx-moon:hover,
+.Light-Mode-Colors .bx-sun:hover {
+    color: rgb(255, 255, 0); /* The sun's color changes into yellow when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* This styles the sun and moon icons when hovered in dark mode. */
+.Dark-Mode-Colors .bx-sun:hover,
+.Dark-Mode-Colors .bx-moon:hover {
+    color: rgb(204, 204, 204); /* The moon's color changes into gray when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+
+/* Styling for the contents of the Projects Page: */
+/* This styles the h1 elements in the "My-Projects-Text" container. */
+.My-Projects-Text h1{
+    text-align: center;
+    font-size: 65px;
+    margin-top: 170px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+/* This styles the container named "My-Projects-Container" which would contain the contents of my recent projects. */
+.My-Projects-Container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    min-height: 75vh;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+  
+/* This styles the project contents within the container. */
+.My-Projects-Container-Contents {
+    position: relative;
+    background: var(--Maroon-Color);
+    margin-top: 15px;
+    margin-right: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+/* This styles the images within the "My-Projects-Container-Contents" container. */
+.My-Projects-Container-Contents img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+  
+/* This styles all of the paragraph elements within the "My-Projects-Container-Contents". */
+.My-Projects-Container-Contents p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+  
+/* This styles the text that details the programming languages I used for the project. */
+.My-Projects-Container-Contents .My-Projects-Container-ProgrammingLanguageUsed {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+  
+/* This styles the box that would appear in the project when hovered. */
+.My-Projects-Container-Contents:hover .My-Projects-Container-Contents-Box {
+    transform: translateY(0);
+}
+
+/* This is also the styling used for the box that would appear in the project when hovered. */
+.My-Projects-Container-Contents-Box {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: var(--Maroon-Color);
+    transform: translateY(100%);
+    height: calc(125% - 35px); 
+    transition: all 0.6s ease-in-out;
+    opacity: 0.9;
+}
+
+/* This styles the text that is on the box that appears when hovered. */
+.My-Projects-Container-Contents-Box p{
+    font-size: 19px;
+    font-weight: 1000;
+    color: white;
+    margin-bottom: 180px;
+}
+
+/* This styles the text (detailing the programming language used for the project) that is on the box that appears when hovered. */
+.My-Projects-Container-ProgrammingLanguageUsed p {
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+/* This styles the button in the box that also appears with the box when the project is hovered. */
+.My-Projects-Container-Contents-Box button {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    padding: 9px;
+    cursor: pointer;
+}
+  
+/* This styles the on hover effect for the button that is in the box that appears when it is hovered. */
+.My-Projects-Container-Contents-Box button:hover {
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: var(--Maroon-Color);
+    transform: scale(1.05);
+    letter-spacing: 5px;
+}
+  
+/* This styles the background (the space outside) of the image that enlarged when it was viewed. */
+.My-Projects-Container-Contents-Close {
+    background: rgba(55, 44, 44, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    z-index: 3;
+}
+  
+/* This styles the format and alignment of the pop-up image. */
+.My-Projects-Container-Contents-Close.openPopUpImage {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+  
+/* This styles the positioning and width of the content that would hold the image of the project. */
+.My-Projects-Container-Contents-Close-Content {
+    position: relative;
+    width: 990px;
+}
+
+/* This styles the image within the "My-Projects-Container-Contents-Close-Content" container. */
+.My-Projects-Container-Contents-Close-Content img {
+    display: block;
+    max-width: 100%;
+}
+
+/* This styles the view button that enlarges the image of the project when clicked. */
+.My-Projects-Container-Contents-View-Button {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+/* This styles the explore button that when clicked would redirect the user to the project itself or its repository. */
+.My-Projects-Container-Contents-Explore-Button button{
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+/* This styles the close button that closes the enlarged image of the project when clicked. */
+.My-Projects-Container-Contents-Close-Button {
+  position: absolute;
+  background: none;
+  font-size: 50px;
+  color: var(--Maroon-Color);
+  top: 5px;
+  right: 19px;
+  border: 0;
+  cursor: pointer;
+}
+  
+/* This styles the on hover effect of the close button that closes the enlarged image of the project when clicked. */
+.My-Projects-Container-Contents-Close-Button:hover {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  scale: 1.2;
+}
+
+
+/* The following lines are for the styling of the additional recent projects. */
+/* This styles the "Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container" container that would store more of my recent projects. They would be displayed using a image slider. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container { 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--Background-Color-Change);
+    margin-bottom: 36px;
+}
+
+/* This styles the input elements that are within the Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input {
+    appearance: none;
+}
+
+/* This styles the all the button elements within the Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Button {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin-top: 760px;
+    gap: 8px;
+}
+
+/* This styles the all the button elements that is within the button container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Button label {
+    height: 20px;
+    width: 20px;
+    background: white;
+    border-radius: 25%;
+    border: 3px solid var(--Maroon-Color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* This styles the labels that is within the button container when they are hovered. */
+.Project-Button label:hover {
+    transform: scale(1.2);
+}
+
+/* This styles all the labels that are linked to the checked input elements. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(1):checked ~ .Project-Button label:nth-child(1),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(2):checked ~ .Project-Button label:nth-child(2), 
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(3):checked ~ .Project-Button label:nth-child(3),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(4):checked ~ .Project-Button label:nth-child(4), 
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(5):checked ~ .Project-Button label:nth-child(5),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(6):checked ~ .Project-Button label:nth-child(6) {
+    opacity: 1;
+}
+
+/* This styles the transition effect for the container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+/* This styles the movement of the transition effect for the container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--img);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    clip-path: circle(0% at 0% 50%);
+    transition: 1.5s;
+}
+
+/* This styles the video element that is within the Project-Transition-Effect-Movement video container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* This styles the play button for the video element that is within the Project-Transition-Effect-Movement video container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement video::-webkit-media-controls-play-button {
+    color: white;
+    background-color: var(--Maroon-Color);
+    border-radius: 50%
+}
+
+/* This styles the play button for the video element that is within the Project-Transition-Effect-Movement video container when hovered. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement video::-webkit-media-controls-play-button:hover {
+    background-color: var(--Maroon-Color);
+}
+
+/* This styles the movement of the transition effect. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(even) {
+    clip-path: circle(0% at 100% 50%); /* This applies a circular clipping path that starts from the right. */
+}
+
+/* This styles the movement of the transition effect based on checked input elements. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(1):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(1),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(2):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(2),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(3):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(3),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(4):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(4),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(5):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(5),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(6):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(6) {
+    clip-path: circle(150% at 50% 50%); /* A circular clipping path expands from the center. */
+    transition-delay: 1s;
+}
+
+/* Styling for the Explore Buttons: */
+.Explore-Project-Button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* This styles the buttons that is within the "Explore-Project-Button" container. */
+.Explore-Project-Button button{
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.3s;
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    border: 2px solid var(--Maroon-Color);
+}
+
+/* This adds hover effects to the buttons that is within the "Explore-Project-Button" container. */
+.Explore-Project-Button button:hover{
+    color: white;
+    background: rgba(73, 48, 54, 255);
+    transform: scale(1.2);
+}
+
+
+/* The following lines are for styling the footer at the bottom of the webpage. */
+/* This styles the FooterAtBottom container. */
+.FooterAtBottom {
+    height: 370px;
+    width: 1525px;
+    background-color: var(--Maroon-Color);
+    padding-top:2px;
+}
+
+/* This styles the logo in the footer. */
+.FooterAtBottom-Logo {
+    margin-top: 30px;
+    text-align: center;
+    animation: slideTransitionFromRight 1s ease forwards;
+}
+
+.FooterAtBottom-Logo a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* This styles the logo in the footer when hovered. */
+.FooterAtBottom-Logo:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+/* This styles the FooterAtBottom-Icon-Container container. */
+.FooterAtBottom-Icon-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+/* The following lines styles each contact icon in the footer. */
+.FooterAtBottom-Icon-Container .ContactIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  margin: 0 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* This styles the contact icon container. */
+.FooterAtBottom-Icon-Container .ContactIcon span{
+  height: 60px;
+  width: 60px;
+  color: var(--Maroon-Color);
+  background: white;
+  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+  z-index: 1;
+}
+
+/* This styles all of the anchor tags within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* This styles all of the icon within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span i{
+  font-size: 25px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+/* The following lines styles the pop-up box when hovering over the contact icons. */
+.FooterAtBottom-Icon-Container .ContactIcon .ContactIconPop-Up{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  background: white;
+  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+  padding: 10px 19px;
+  pointer-events: none;
+  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+  z-index: 1;
+}
+
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+  top: -60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* This styles the arrow of the pop-up box. */
+.ContactIcon .ContactIconPop-Up:before{
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  background: white;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+}
+
+/* This styles the color of the icon when hovering over the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span{
+  color: white;
+}
+
+/* This adds a text shadow effect when hovered. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span,
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+/* This styles the background of the Facebook contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Facebook:hover span,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up:before{
+  background: #1877F2;
+}
+
+/* This styles the background of the Instagram contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Instagram:hover span,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up:before{
+  background: #C13584;
+}
+
+/* This styles the background of the YouTube contact icon when hovered. */
+.FooterAtBottom-Icon-Container .YouTube:hover span,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up:before{
+  background: #FF0000;
+}
+
+/* This styles the background of the LinkedIn contact icon when hovered. */
+.FooterAtBottom-Icon-Container .LinkedIn:hover span,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up:before{
+  background: #0077B5;
+}
+
+/* This styles the background of the Gmail contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Gmail:hover span,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up:before{
+  background: 	#B23121;
+}
+
+/* The following lines styles the navigation menu in the footer. */
+.FooterAtBottom-NavigationMenu{
+  margin: 30px;
+}
+
+/* This styles the unorder list for the navigation menu list in the footer. */
+.FooterAtBottom-NavigationMenu ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* This styles each of the navigational menu item link in the footer. */
+.FooterAtBottom-NavigationMenu ul li a{
+  font-size: 20px;
+  color:white;
+  margin: 15px;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: 0.9s;
+}
+
+/* This styles the navigation menu when hovered. */
+.FooterAtBottom-NavigationMenu ul li a:hover{
+  opacity: 1000;
+}
+
+/* Footer */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--Maroon-Color);
+    padding: 20px;
+    z-index: 100;
+}
+
+/* The following lines are the Keyframe animations: */
+/* Keyframe animation for sliding in from the right. */
+@keyframes slideTransitionFromRight {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(100px); /* It moves it 100px to the right. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the left. */
+@keyframes slideTransitionFromLeft {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(-100px); /* It moves it 100px to the left. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the top. */
+@keyframes slideTransitionFromTop {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateY(100px); /* It moves it down by 100px. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateY(0); /* It moves back to its original position. */
+    }
+}
