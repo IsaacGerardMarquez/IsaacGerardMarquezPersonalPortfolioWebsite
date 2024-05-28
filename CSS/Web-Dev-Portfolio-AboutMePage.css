@@ -1,0 +1,649 @@
+/* I reset the default styles. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Light Mode Colours*/
+.Light-Mode-Colors {
+    --Background-Color-Change: white;
+    --Maroon-Color: rgba(73, 48, 54, 255);
+    color: #333;
+}
+
+/* Dark Mode Colours*/
+.Dark-Mode-Colors {
+    --Background-Color-Change: #444444;
+    --White-Text-Color: white;
+    color: var(--White-Text-Color);
+}
+
+/* These are the stylings I used for the body element. */
+body {
+    background: var(--Background-Color-Change);
+    overflow-x: hidden;
+}
+
+/* This section styles the header of my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Header {
+    background: var(--Maroon-Color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 25px 7%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* This styles the logo of my website. */
+.Web-Dev-Portfolio-Logo {
+    margin-right: auto;
+    cursor: pointer;
+    animation: slideTransitionFromRight 1.8s ease forwards;
+}
+
+/* This styles the logo upon hover. */
+.Web-Dev-Portfolio-Logo:hover {
+    transform: scale(1.2);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* Navigation Menu: */
+/* This styles the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right: 33px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0; /* I set the width to 0 for the invisible line. */
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website when hovered. */
+.Web-Dev-Portfolio-Navigation-Menu a:hover::before {
+    width: 100%; /* When the user hovers, the line below the text expands to its full width. */
+}
+
+/* Light and Dark Mode Buttons: */
+/* This styles the dark mode button within my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Dark-Mode-Button {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 2.9s;
+}
+/* This styles the icon. */
+.Web-Dev-Portfolio-Dark-Mode-Button .Dark-Mode-Button {
+    color: white;
+    font-size: 28px;
+}
+
+/* This styles the sun and moon icons when hovered in light mode. */
+.Light-Mode-Colors .bx-moon:hover,
+.Light-Mode-Colors .bx-sun:hover {
+    color: rgb(255, 255, 0); /* The sun's color changes into yellow when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* This styles the sun and moon icons when hovered in dark mode. */
+.Dark-Mode-Colors .bx-sun:hover,
+.Dark-Mode-Colors .bx-moon:hover {
+    color: rgb(204, 204, 204); /* The moon's color changes into gray when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+
+/* This styles the Web-Dev-Portfolio-AboutMe container. */
+.Web-Dev-Portfolio-AboutMe {
+    min-height: 100vh;
+    width: 100%;
+    padding: 180px;
+}
+
+/* This styles the image within the Web-Dev-Portfolio-AboutMe container. */
+.Web-Dev-Portfolio-AboutMe img {
+    height: auto;
+    width: 50%;
+    border: 2px solid var(--Maroon-Color);
+    border-radius: 50px;
+    box-shadow: 0 0 5px var(--Maroon-Color), 0 0 55px var(--Maroon-Color);
+    margin-bottom: 50px;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideTransitionFromLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+/* This styles the image within the Web-Dev-Portfolio-AboutMe container when hovered. */
+.Web-Dev-Portfolio-AboutMe img:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transition: 1.5s;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Main-Content container. */
+.Web-Dev-Portfolio-AboutMe-Main-Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content {
+    margin-bottom: 180px;
+}
+
+/* This styles the h1 elements within the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content h1 {
+    color: var(--White-Text-Color);
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin-top: -105px;
+    margin-bottom: 5px;
+    margin-left: 70px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+/* This styles the h5 elements within the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content h5 {
+    color: var(--Maroon-Color);
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .9s;
+}
+
+/* This styles the p elements within the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content p {
+    color: var(--White-Text-Color);
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 25px;
+    margin-left: 70px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* This styles all the span elements. */
+span {
+    color: rgba(73,48,54,255);
+}
+
+/* This styles the container for the clickable texts that opens a tab to show different categories of trivia information about me. */
+.Web-Dev-Portfolio-AboutMe-Trivias {
+    display: flex;
+    margin: 5px 0 -25px;
+}
+
+/* This styles the each clickable tabs within the container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* This styles the underline indicator for the active tab. */
+.Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--Maroon-Color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.8s;
+}
+
+/* This styles the underline indicator for the active tab as well by expanding the line (to 70%) when it is active. */
+.Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac.active-link::after {
+    width: 70%;
+}
+
+/* This styles the unordered list within the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* This styles the list items within the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos ul li {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 80px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* This styles the spans that is within the list items found in the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos ul li span {
+    color: var(--Maroon-Color);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2.5;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos {
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin-top: 25px;
+    left: 54%;
+    width: 90%;
+    max-width: 650px;
+    padding: 20px;
+    border: solid 2px var(--Maroon-Color);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--Maroon-Color), 0 0 35px var(--Maroon-Color);
+    z-index: 1;
+    animation: slideTransitionFromRight 1s ease forwards;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Trivias-Infos container when hovered. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    transition: 1.5s;
+    z-index: 2;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Trivias-Infos container when active or showing. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos.active-tab {
+    display: block;
+}
+
+
+/* The styling to be used when in dark mode. */
+.Dark-Mode-Colors .Web-Dev-Portfolio-AboutMe-Trivias-Infos {
+    background-color: #333;
+    color: white;
+}
+
+/* The styling to be used when in light mode. */
+.Light-Mode-Colors .Web-Dev-Portfolio-AboutMe-Trivias-Infos {
+    background-color: white;
+    color: #333;
+}
+
+
+/* This styles the AboutMeDescription container, which introduces me in the About Me Section. */
+.AboutMeDescription {
+    margin: 0px 120px 140px 120px;
+    text-align: left;
+    font-size: 25px;
+}
+
+/* This styles the span elements in the AboutMeDescription container. */
+.AboutMeDescription span {
+    color: rgba(73,48,54,255);
+    font-size: 44px;
+}
+
+/* This styles the graph that shows my current skills. */
+/* This styles the Isaac-Current-Skils container. */
+.Isaac-Current-Skils {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* This styles the h1 element within the Isaac-Current-Skils container. */
+.Isaac-Current-Skils h1{
+    color: var(--Maroon-Color);
+    font-size: 60px;
+    font-weight: 1000;
+    margin-right: 240px;
+    margin-bottom: 20px;
+}
+
+/* This styles the Isaac-Current-Skils-Progress-Bar container. */
+.Isaac-Current-Skils .Isaac-Current-Skils-Progress-Bar {
+    width: 100%;
+    margin: 25px 0;
+}
+
+/* This styles the Isaac-Current-Skils-Language container. */
+.Isaac-Current-Skils-Progress-Bar .Isaac-Current-Skils-Language {
+    display: block;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--Maroon-Color);
+}
+
+/* This styles the Isaac-Current-Skils-Progress-Bar-Graph container. */
+.Isaac-Current-Skils-Progress-Bar .Isaac-Current-Skils-Progress-Bar-Graph {
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* This styles the progress bar. */
+.Isaac-Current-Skils-Progress-Bar-Graph .Isaac-Current-Skils-Progress-Bar {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 15px;
+    background: var(--Maroon-Color);
+    animation: movementOfProgressBar 5.2s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* The following lines are the styling used for the progress bar for each programming language. */
+/* Python */
+.Isaac-Current-Skils-Progress-Bar.Python {
+    width: 70%;
+    animation-delay: 0.4s;
+}
+
+/* HTML */
+.Isaac-Current-Skils-Progress-Bar.HTML {
+    width: 90%;
+    animation-delay: 0.4s;
+}
+
+/* CSS */
+.Isaac-Current-Skils-Progress-Bar.CSS {
+    width: 80%;
+    animation-delay: 0.4s;
+}
+
+/* JavaScript */
+.Isaac-Current-Skils-Progress-Bar.JavaScript {
+    width: 40%;
+    animation-delay: 0.6s;
+}
+
+/* This styles the percentage for each skill. */
+.Isaac-Current-Skils-Progress-Bar .Skills-Percentage {
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    padding: 4px 3px;
+    border-radius: 3px;
+    background: var(--Maroon-Color);
+    z-index: 1;
+}
+
+/* The following lines are for styling the footer at the bottom of the webpage. */
+/* This styles the FooterAtBottom container. */
+.FooterAtBottom {
+    height: 370px;
+    width: 1525px;
+    background-color: var(--Maroon-Color);
+    padding-top:2px;
+}
+
+/* This styles the logo in the footer. */
+.FooterAtBottom-Logo {
+    margin-top: 30px;
+    text-align: center;
+    animation: slideTransitionFromRight 1s ease forwards;
+}
+
+.FooterAtBottom-Logo a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* This styles the logo in the footer when hovered. */
+.FooterAtBottom-Logo:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+/* This styles the FooterAtBottom-Icon-Container container. */
+.FooterAtBottom-Icon-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+/* The following lines styles each contact icon in the footer. */
+.FooterAtBottom-Icon-Container .ContactIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    margin: 0 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* This styles the contact icon container. */
+.FooterAtBottom-Icon-Container .ContactIcon span{
+    height: 60px;
+    width: 60px;
+    color: var(--Maroon-Color);
+    background: white;
+    box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+    z-index: 1;
+}
+
+/* This styles all of the anchor tags within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* This styles all of the icon within the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon span i{
+    font-size: 25px;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+/* The following lines styles the pop-up box when hovering over the contact icons. */
+.FooterAtBottom-Icon-Container .ContactIcon .ContactIconPop-Up{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    background: white;
+    box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+    padding: 10px 19px;
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+    z-index: 1;
+}
+
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+    top: -60px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* This styles the arrow of the pop-up box. */
+.ContactIcon .ContactIconPop-Up:before{
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    background: white;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+}
+
+/* This styles the color of the icon when hovering over the contact icon. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span{
+    color: white;
+}
+
+/* This adds a text shadow effect when hovered. */
+.FooterAtBottom-Icon-Container .ContactIcon:hover span,
+.FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+/* This styles the background of the Facebook contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Facebook:hover span,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up:before{
+    background: #1877F2;
+}
+
+/* This styles the background of the Instagram contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Instagram:hover span,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up:before{
+    background: #C13584;
+}
+
+/* This styles the background of the YouTube contact icon when hovered. */
+.FooterAtBottom-Icon-Container .YouTube:hover span,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up:before{
+    background: #FF0000;
+}
+
+/* This styles the background of the LinkedIn contact icon when hovered. */
+.FooterAtBottom-Icon-Container .LinkedIn:hover span,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .LinkedIn:hover .ContactIconPop-Up:before{
+  background: #0077B5;
+}
+
+/* This styles the background of the Gmail contact icon when hovered. */
+.FooterAtBottom-Icon-Container .Gmail:hover span,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up,
+.FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up:before{
+    background: 	#B23121;
+}
+
+/* The following lines styles the navigation menu in the footer. */
+.FooterAtBottom-NavigationMenu{
+    margin: 30px;
+}
+
+/* This styles the unorder list for the navigation menu list in the footer. */
+.FooterAtBottom-NavigationMenu ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* This styles each of the navigational menu item link in the footer. */
+.FooterAtBottom-NavigationMenu ul li a{
+    font-size: 20px;
+    color:white;
+    margin: 15px;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.9s;
+}
+
+/* This styles the navigation menu when hovered. */
+.FooterAtBottom-NavigationMenu ul li a:hover{
+    opacity: 1000;
+}
+
+
+/* Footer */
+footer {
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--Maroon-Color);
+    padding: 20px;
+    color: white;
+    z-index: 3;
+}
+
+
+/* The following lines are the Keyframe animations: */
+/* Keyframe animation for sliding in from the left. */
+@keyframes slideTransitionFromLeft {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(-100px); /* It moves it 100px to the left. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the right. */
+@keyframes slideTransitionFromRight {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(100px); /* It moves it 100px to the right. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for the movement of the progress bar. */
+@keyframes movementOfProgressBar {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
